@@ -98,8 +98,50 @@
         .index {
             z-index: 1;
         }
-        .H_carousel{
+
+        .H_carousel {
             height: 40rem;
+        }
+
+        .slide-left-1 {
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+
+        .slide-right-1 {
+            animation-duration: 3s;
+            animation-name: slidein-right;
+            animation-delay: 3s;
+        }
+
+        .slide-left-2 {
+            animation-duration: 3s;
+            animation-name: slidein;
+            animation-delay: 6s;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        @keyframes slidein-right {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -148,49 +190,46 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
-        <div class="carousel-inner H_carousel">
-            <div class="carousel-item active">
-                <img src="images/skincare.jpg" class="d-block w-100  H_carousel" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-black">Skincare</h5>
-                    <p class="fs-5 text-black">The best skincare you can hove with the lowest price!</p>
-                    </div>
+            <div class="carousel-inner H_carousel">
+                <div class="carousel-item active">
+                    <img src="images/who_are_we.jpeg" class="d-block w-100  H_carousel" alt="...">
+
                 </div>
                 <div class="carousel-item">
-                <img src="images/headphone.jpg" class="d-block w-100  H_carousel" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Headphones <span class="badge bg-danger">New!</span></h5>
-                    <p class="fs-5">best Headphones with the lowest prices!</p>
-                    </div>
+                    <img src="images/why-are-we-here.jpg" class="d-block w-100  H_carousel" alt="...">
+
                 </div>
                 <div class="carousel-item">
-                <img src="images/skincare.jpg" class="d-block w-100 H_carousel" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-black">Skincare</h5>
-                    <p class="fs-5 text-black">Skincare will take care of your face and it becomes soft.</p>
+                    <img src="images/How-to-find-us.jpg" class="d-block w-100 H_carousel" alt="...">
+                    
                     </div>
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
     </div>
-    <div class="BG_white py-1">
-        <button class="ButtonHover">Home</button>
-        <button class="ButtonHover">Contact</button>
-        <button class="ButtonHover">Products</button>
-    </div>
-    <div class="d-flex flex-column">
+    <div class="BG_white py-1 row gx-5">
+        <div class="col-md-4 col-sm-3">
+            <a href="home.html"><button class="ButtonHover"><i class="bi bi-house-door-fill">Home</i></button></a>
+        </div>
+        <div class="col-md-4 col-sm-3">
+            <a href="contact.html"><button class="ButtonHover"><i class="bi bi-telephone-fill">Contact</i></button></a>
+        </div>
+        <div class="col-md-4 col-sm-3">
+            <a href="webshop.html"><button class="ButtonHover"><i class="bi bi-bag-fill">Products</i></button></a>
+        </div>
+        </div>
+        <div class="d-flex flex-column">
 
         <div class="about_us_BG d-flex flex-column">
-            <div class="my-5 pe-5" style="margin-left: auto; text-align: right;">
-                <img src="images/skincare.jpg" class="koelkast_IMG my-5 mx-5 rounded-4" alt="">
+            <div class="my-5 pe-5 slide-left-1" style="margin-left: auto; text-align: right;">
+                <img src="images/who_are_we.jpeg" class="koelkast_IMG my-5 mx-5 rounded-4" alt="">
                 <h1 class="my-1 ms-4">Who are we?</h1>
                 <p class=" my-1 ms-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi. necessitatibus
                     corrupti ullam architecto, sunt aliquam expedita nobis corporis ad omnis maxime quis pariatur
@@ -204,8 +243,8 @@
             </div>
         </div>
         <div class="about_us_BG_2">
-            <div class="pe-5">
-                <img src="images/skincare.jpg" class="koelkast_IMG my-5 mx-5 rounded-4" alt="">
+            <div class="pe-5 slide-right-1">
+                <img src="images/why-are-we-here.jpg" class="koelkast_IMG my-5 mx-5 rounded-4" alt="">
                 <h1 class="my-1 ms-4">Why we're here?</h1>
                 <p class=" my-1 ms-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi. necessitatibus
                     corrupti ullam architecto, sunt aliquam expedita nobis corporis ad omnis maxime quis pariatur
@@ -219,8 +258,8 @@
             </div>
         </div>
         <div class="about_us_BG_3 d-flex flex-column">
-            <div class="pe-5" style="margin-left: auto; text-align: right;">
-                <img src="images/skincare.jpg" class="koelkast_IMG test my-5 mx-5 rounded-4" alt="">
+            <div class="pe-5 slide-left-2" style="margin-left: auto; text-align: right;">
+                <img src="images/How-to-find-us.jpg" class="koelkast_IMG test my-5 mx-5 rounded-4" alt="">
                 <h1 class="my-1 ms-4">Where can you find us?</h1>
                 <p class=" my-1 ms-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi. necessitatibus
                     corrupti ullam architecto, sunt aliquam expedita nobis corporis ad omnis maxime quis pariatur
@@ -279,11 +318,11 @@
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>Company name
+                                <i class="fas fa-gem me-3"></i>Webshop
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                dolor sit amet, consectetur adipisicing elit.
+                                sunt aliquam expedita nobis corporis ad omnis maxime quis pariatur impedit, itaque
+                                deserunt eum! Eius, eveniet vero!
                             </p>
                         </div>
                         <!-- Grid column -->
